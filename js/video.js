@@ -45,10 +45,30 @@ document.querySelector("#skip").addEventListener("click", function() {
  });
 
 // DO MUTE AND UNMUTE (you need an if else and there is a javascript function to ask if the video is muted -- if video is muted dislay this)
+document.querySelector("#mute").addEventListener("click", function() {
+	if (video.muted == false) {   
+		video.muted = true;
+		console.log("Video Muted")
+		document.querySelector('#mute').innerHTML = "Unmute";
+	 	}
+ 
+	else {
+		video.muted = false;
+		console.log("Video Umuted")
+		document.querySelector('#mute').innerHTML = "Mute";
+	 	}
+});
 
 document.querySelector("#slider").addEventListener("click", function() {
 	console.log("The current volume is " + video.volume);
 	video.volume = this.value / 100;
 	console.log("The current volume is " + video.volume);
 	document.querySelector('#volume').innerHTML = video.volume * 100 + "%";
+});
+
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	console.log("Old School On")
+	
+
 });
