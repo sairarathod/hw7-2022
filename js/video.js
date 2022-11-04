@@ -69,6 +69,12 @@ document.querySelector("#slider").addEventListener("click", function() {
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	console.log("Old School On")
-	
+	video.classList.add("oldSchool");
+
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	console.log("Original On")
+	video.classList.remove("oldSchool");
 
 });
